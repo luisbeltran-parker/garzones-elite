@@ -2,252 +2,274 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Garzones Elite | Mozos Profesionales para Eventos</title>
+<title>Garzones Elite | Servicio Profesional de Mozos para Eventos</title>
 
-  <meta name="description" content="Servicio profesional de mozos para eventos sociales y corporativos. Elegancia, puntualidad y atención de alto nivel en Perú.">
+<meta name="description" content="Servicio profesional de mozos para eventos sociales y corporativos en Perú. Elegancia, puntualidad y atención de alto nivel.">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+<style>
 
-    body {
-      background: #0b0b0b;
-      color: white;
-    }
+/* ================== BASE ================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
-    /* HERO */
-    .hero {
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-                  url('imagenes/garzones-elite-eventos.jpg');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-    }
+body{
+  background:#0B0B0B;
+  color:#fff;
+}
 
-    /* NAV */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-    }
+/* ================== HERO ================== */
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.9)),
+  url('imagenes/garzones-elite-eventos.jpg');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  flex-direction:column;
+}
 
-    .logo {
-      height: 60px;
-    }
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 50px;
+  align-items:center;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 0.9rem;
-    }
+.logo{
+  color:#C9A84C;
+  font-weight:700;
+  letter-spacing:2px;
+}
 
-    nav a:hover {
-      color: #C9A84C;
-    }
+nav a{
+  color:#fff;
+  margin-left:20px;
+  text-decoration:none;
+  font-size:0.9rem;
+}
 
-    /* HERO CONTENT */
-    .hero-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+nav a:hover{
+  color:#C9A84C;
+}
 
-    .hero-content h1 {
-      font-size: 3rem;
-      color: #C9A84C;
-    }
+/* HERO CONTENT */
+.hero-content{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
 
-    .hero-content p {
-      margin: 10px 0;
-      color: #ddd;
-    }
+.hero-content h1{
+  font-size:4rem;
+  color:#C9A84C;
+}
 
-    .btn {
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #C9A84C;
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 30px;
-    }
+.hero-content p{
+  color:#ddd;
+  margin-top:10px;
+  max-width:600px;
+}
 
-    section {
-      padding: 80px 40px;
-      text-align: center;
-    }
+/* BOTONES */
+.btn{
+  margin-top:20px;
+  padding:14px 30px;
+  background:#C9A84C;
+  color:#000;
+  text-decoration:none;
+  font-weight:700;
+  border-radius:30px;
+  transition:0.3s;
+}
 
-    .section-title {
-      font-size: 2rem;
-      color: #C9A84C;
-      margin-bottom: 30px;
-    }
+.btn:hover{
+  transform:scale(1.05);
+}
 
-    /* CARDS */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+/* ================= SECCIONES ================= */
+section{
+  padding:90px 50px;
+  text-align:center;
+}
 
-    .card {
-      background: #111;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #222;
-    }
+.title{
+  color:#C9A84C;
+  font-size:2.2rem;
+  margin-bottom:40px;
+}
 
-    /* EXPERIENCIA */
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
 
-    .timeline-item {
-      background: #111;
-      padding: 20px;
-      border-left: 3px solid #C9A84C;
-      text-align: left;
-    }
+.card{
+  background:#111;
+  padding:25px;
+  border:1px solid #222;
+  border-radius:10px;
+  transition:0.3s;
+}
 
-    .timeline-item h3 {
-      color: #C9A84C;
-    }
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#C9A84C;
+}
 
-    .timeline-item h4 {
-      margin: 5px 0;
-    }
+/* EXPERIENCIA */
+.timeline{
+  max-width:900px;
+  margin:auto;
+  text-align:left;
+}
 
-    .timeline-item p {
-      color: #bbb;
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
+.item{
+  background:#111;
+  margin-bottom:20px;
+  padding:20px;
+  border-left:4px solid #C9A84C;
+}
 
-    /* CONTACTO */
-    .contact {
-      background: #0f0f0f;
-    }
+.item h3{
+  color:#C9A84C;
+}
 
-    footer {
-      background: black;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.8rem;
-      color: #777;
-    }
+/* CONTACTO */
+.contact{
+  background:#0f0f0f;
+}
 
-    /* WHATSAPP FLOAT */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 15px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* FOOTER */
+footer{
+  background:#000;
+  padding:30px;
+  text-align:center;
+  color:#777;
+}
 
-  </style>
+/* WHATSAPP */
+.wa{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
+<!-- HERO -->
+<div class="hero">
 
-    <header>
-      <img src="imagenes/logo.png" class="logo" alt="Logo">
-      <nav>
-        <a href="#servicios">Servicios</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </header>
-
-    <div class="hero-content">
-      <h1>Garzones Elite</h1>
-      <p>Servicio profesional de mozos para eventos elegantes</p>
-      <a href="https://wa.me/51927621010" class="btn">Cotizar por WhatsApp</a>
-    </div>
-
+<nav>
+  <div class="logo">GARZONES ELITE</div>
+  <div>
+    <a href="#servicios">Servicios</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#contacto">Contacto</a>
   </div>
+</nav>
 
-  <!-- SERVICIOS -->
-  <section id="servicios">
-    <h2 class="section-title">Servicios</h2>
+<div class="hero-content">
+  <h1>Garzones Elite</h1>
+  <p>Servicio profesional de mozos para eventos sociales y corporativos en Perú. Elegancia, puntualidad y excelencia garantizada.</p>
 
-    <div class="grid">
-      <div class="card">Mozos para eventos sociales</div>
-      <div class="card">Eventos corporativos</div>
-      <div class="card">Servicio de buffet</div>
-    </div>
-  </section>
+  <a class="btn" href="https://wa.me/51927621010">📲 Cotizar por WhatsApp</a>
+</div>
 
-  <!-- EXPERIENCIA -->
-  <section id="experiencia">
-    <h2 class="section-title">Experiencia Profesional</h2>
+</div>
 
-    <div class="timeline">
+<!-- SERVICIOS -->
+<section id="servicios">
+<h2 class="title">Servicios Premium</h2>
 
-      <div class="timeline-item">
-        <h3>2024 – 2026</h3>
-        <h4>Garzones Elite | Servicio Independiente</h4>
-        <p>Atención en eventos sociales, bodas, corporativos y servicio VIP.</p>
-      </div>
+<div class="grid">
 
-      <div class="timeline-item">
-        <h3>2022 – 2024</h3>
-        <h4>Mozo Profesional</h4>
-        <p>Servicio en eventos de alta demanda, protocolo y atención al cliente.</p>
-      </div>
+<div class="card">
+🍽️ Mozos profesionales<br>
+Atención elegante y protocolo de alto nivel.
+</div>
 
-      <div class="timeline-item">
-        <h3>2020 – 2022</h3>
-        <h4>Asistente de Eventos</h4>
-        <p>Inicio en atención al cliente, apoyo en eventos y logística básica.</p>
-      </div>
+<div class="card">
+🥂 Eventos sociales<br>
+Bodas, quinceañeros y celebraciones.
+</div>
 
-    </div>
-  </section>
+<div class="card">
+🏢 Eventos corporativos<br>
+Empresas, congresos y cenas ejecutivas.
+</div>
 
-  <!-- CONTACTO -->
-  <section id="contacto" class="contact">
-    <h2 class="section-title">Contacto</h2>
-    <p>📲 WhatsApp: 927 621 010</p>
-    <p>📍 Puno - Perú</p>
-  </section>
+<div class="card">
+🍰 Buffet & catering<br>
+Servicio completo de atención en mesa.
+</div>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Garzones Elite - Todos los derechos reservados
-  </footer>
+</div>
+</section>
 
-  <!-- WHATSAPP -->
-  <a href="https://wa.me/51927621010?text=Hola%20quiero%20cotizar%20un%20evento" class="whatsapp">
-    WhatsApp
-  </a>
+<!-- EXPERIENCIA -->
+<section id="experiencia">
+<h2 class="title">Experiencia 2020 - 2026</h2>
+
+<div class="timeline">
+
+<div class="item">
+<h3>2024 - 2026</h3>
+<p>Garzones Elite - servicio independiente de alto nivel en eventos sociales y corporativos.</p>
+</div>
+
+<div class="item">
+<h3>2022 - 2024</h3>
+<p>Experiencia en eventos masivos, protocolo de mesa y atención VIP.</p>
+</div>
+
+<div class="item">
+<h3>2020 - 2022</h3>
+<p>Inicio en eventos sociales, aprendizaje en servicio y atención al cliente.</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contact">
+<h2 class="title">Contacto</h2>
+<p>📍 Puno - Perú</p>
+<p>📲 WhatsApp: +51 927 621 010</p>
+<p>📲 WhatsApp: +51 935 965 552</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2026 Garzones Elite — Elegancia que se nota, servicio que se recuerda.
+</footer>
+
+<!-- WHATSAPP -->
+<a class="wa" href="https://wa.me/51927621010">WhatsApp</a>
 
 </body>
 </html>
