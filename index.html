@@ -1,275 +1,1103 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Garzones Elite | Servicio Profesional de Mozos para Eventos</title>
-
-<meta name="description" content="Servicio profesional de mozos para eventos sociales y corporativos en Perú. Elegancia, puntualidad y atención de alto nivel.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<title>Garzones Elite | Servicio Profesional de Mozos – Puno, Perú</title>
+<meta name="description" content="Servicio profesional de mozos para eventos sociales y corporativos en Puno y el sur del Perú. Elegancia, puntualidad y compromiso.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ================== BASE ================== */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
+  :root {
+    --negro:    #0a0a0a;
+    --negro2:   #111111;
+    --negro3:   #1a1a1a;
+    --negro4:   #222222;
+    --oro:      #C9A84C;
+    --oro-claro:#E8C96A;
+    --oro-oscuro:#A07830;
+    --blanco:   #f5f0e8;
+    --gris:     #888888;
+    --gris2:    #555555;
+  }
 
-body{
-  background:#0B0B0B;
-  color:#fff;
-}
+  html { scroll-behavior: smooth; }
 
-/* ================== HERO ================== */
-.hero{
-  height:100vh;
-  background:
-  linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.9)),
-  url('imagenes/garzones-elite-eventos.jpg');
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  flex-direction:column;
-}
+  body {
+    background: var(--negro);
+    color: var(--blanco);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
 
-/* NAV */
-nav{
-  display:flex;
-  justify-content:space-between;
-  padding:20px 50px;
-  align-items:center;
-}
+  /* ── TIPOGRAFÍA ELEGANTE ── */
+  .serif { font-family: 'Cormorant Garamond', serif; }
+  .oro { color: var(--oro); }
+  .linea-oro {
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--oro), transparent);
+    margin: 0 auto 1.5rem;
+  }
 
-.logo{
-  color:#C9A84C;
-  font-weight:700;
-  letter-spacing:2px;
-}
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 999;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--oro);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--blanco); font-weight: 300; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    color: var(--gris);
+    text-decoration: none;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--oro); }
+  .nav-cta {
+    background: transparent;
+    border: 1px solid var(--oro);
+    color: var(--oro);
+    padding: 0.45rem 1.2rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .nav-cta:hover { background: var(--oro); color: var(--negro); }
 
-nav a{
-  color:#fff;
-  margin-left:20px;
-  text-decoration:none;
-  font-size:0.9rem;
-}
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 2rem 80px;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 60%, rgba(201,168,76,0.07) 0%, transparent 70%),
+      linear-gradient(180deg, #0a0a0a 0%, #0f0c07 50%, #0a0a0a 100%);
+  }
+  /* decoración geométrica */
+  .hero-deco {
+    position: absolute; inset: 0; pointer-events: none;
+  }
+  .hero-deco::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(600px, 90vw);
+    height: min(600px, 90vw);
+    border: 1px solid rgba(201,168,76,0.08);
+    border-radius: 50%;
+    animation: pulseRing 4s ease-in-out infinite;
+  }
+  .hero-deco::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(400px, 70vw);
+    height: min(400px, 70vw);
+    border: 1px solid rgba(201,168,76,0.12);
+    border-radius: 50%;
+    animation: pulseRing 4s ease-in-out 1s infinite;
+  }
+  @keyframes pulseRing {
+    0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.04); }
+  }
 
-nav a:hover{
-  color:#C9A84C;
-}
+  .hero-content { position: relative; z-index: 2; max-width: 820px; }
+  .hero-badge {
+    display: inline-block;
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--oro);
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    padding: 0.4rem 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+  .hero-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2em;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.4s forwards;
+  }
+  .hero-titulo strong {
+    display: block;
+    font-weight: 700;
+    color: var(--oro);
+    font-style: italic;
+  }
+  .hero-eslogan {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gris);
+    margin: 1.5rem auto 0.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.6s forwards;
+  }
+  .hero-subtitulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(245,240,232,0.75);
+    margin: 1.2rem auto 3rem;
+    max-width: 580px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.8s forwards;
+  }
+  .hero-btns {
+    display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
+    opacity: 0;
+    animation: fadeUp 0.8s 1s forwards;
+  }
+  .btn-primario {
+    background: linear-gradient(135deg, var(--oro-oscuro), var(--oro), var(--oro-claro));
+    color: var(--negro);
+    padding: 1rem 2.2rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    transition: all 0.3s;
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+  }
+  .btn-primario:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(201,168,76,0.35); }
+  .btn-secundario {
+    background: transparent;
+    border: 1px solid rgba(201,168,76,0.5);
+    color: var(--blanco);
+    padding: 1rem 2.2rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    transition: all 0.3s;
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+  }
+  .btn-secundario:hover { border-color: var(--oro); color: var(--oro); transform: translateY(-3px); }
 
-/* HERO CONTENT */
-.hero-content{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-}
+  .hero-scroll {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    color: var(--gris);
+    font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+    animation: bounce 2s ease-in-out infinite;
+  }
+  .hero-scroll::after {
+    content: '';
+    display: block;
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, var(--oro), transparent);
+  }
+  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
 
-.hero-content h1{
-  font-size:4rem;
-  color:#C9A84C;
-}
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
 
-.hero-content p{
-  color:#ddd;
-  margin-top:10px;
-  max-width:600px;
-}
+  /* ── STATS ── */
+  #stats {
+    background: var(--negro2);
+    border-top: 1px solid rgba(201,168,76,0.15);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    padding: 3rem 2rem;
+  }
+  .stats-grid {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem; text-align: center;
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--oro);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gris);
+    margin-top: 0.4rem;
+  }
 
-/* BOTONES */
-.btn{
-  margin-top:20px;
-  padding:14px 30px;
-  background:#C9A84C;
-  color:#000;
-  text-decoration:none;
-  font-weight:700;
-  border-radius:30px;
-  transition:0.3s;
-}
+  /* ── SECCIONES GENERALES ── */
+  section { padding: 6rem 2rem; }
+  .section-header { text-align: center; margin-bottom: 4rem; }
+  .section-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--oro);
+    margin-bottom: 1rem;
+  }
+  .section-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.15;
+  }
+  .section-titulo em { font-style: italic; color: var(--oro); font-weight: 400; }
+  .section-desc {
+    max-width: 520px; margin: 1.5rem auto 0;
+    color: var(--gris);
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
 
-.btn:hover{
-  transform:scale(1.05);
-}
+  /* ── SERVICIOS ── */
+  #servicios { background: var(--negro); }
+  .servicios-grid {
+    max-width: 1100px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5px;
+    border: 1px solid rgba(201,168,76,0.12);
+  }
+  .servicio-card {
+    background: var(--negro2);
+    padding: 2.5rem 2rem;
+    border: 1px solid rgba(201,168,76,0.08);
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+  }
+  .servicio-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--oro), transparent);
+    transform: scaleX(0);
+    transition: transform 0.4s;
+  }
+  .servicio-card:hover { background: var(--negro3); transform: translateY(-4px); }
+  .servicio-card:hover::before { transform: scaleX(1); }
+  .servicio-icon {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    display: block;
+  }
+  .servicio-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--blanco);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.03em;
+  }
+  .servicio-desc { color: var(--gris); font-size: 0.88rem; line-height: 1.8; }
 
-/* ================= SECCIONES ================= */
-section{
-  padding:90px 50px;
-  text-align:center;
-}
+  /* ── EXPERIENCIA TIMELINE ── */
+  #experiencia { background: var(--negro2); }
+  .timeline {
+    max-width: 800px; margin: 0 auto;
+    position: relative;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--oro), var(--oro), transparent);
+  }
+  .tl-item {
+    padding-left: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+  }
+  .tl-dot {
+    position: absolute;
+    left: -5px; top: 4px;
+    width: 11px; height: 11px;
+    border: 2px solid var(--oro);
+    background: var(--negro2);
+    border-radius: 50%;
+  }
+  .tl-fecha {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--oro);
+    margin-bottom: 0.5rem;
+  }
+  .tl-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--blanco);
+    margin-bottom: 0.8rem;
+  }
+  .tl-desc { color: var(--gris); font-size: 0.88rem; line-height: 1.8; }
+  .tl-tags {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .tl-tag {
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--oro-claro);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.7rem;
+  }
 
-.title{
-  color:#C9A84C;
-  font-size:2.2rem;
-  margin-bottom:40px;
-}
+  /* ── PAQUETES ── */
+  #paquetes { background: var(--negro); }
+  .paquetes-grid {
+    max-width: 820px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  .paquete-card {
+    background: var(--negro2);
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.4s;
+  }
+  .paquete-card.destacado {
+    border-color: var(--oro);
+    background: linear-gradient(160deg, var(--negro2) 0%, rgba(201,168,76,0.05) 100%);
+  }
+  .paquete-card.destacado::after {
+    content: 'MÁS POPULAR';
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--oro);
+    color: var(--negro);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    padding: 0.25rem 0.8rem;
+  }
+  .paquete-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+  .paquete-nombre {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--oro);
+    margin-bottom: 1rem;
+  }
+  .paquete-precio {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--blanco);
+    line-height: 1;
+  }
+  .paquete-precio sup { font-size: 1.5rem; vertical-align: super; color: var(--oro); }
+  .paquete-precio span { font-size: 1rem; color: var(--gris); font-weight: 300; }
+  .paquete-divider {
+    width: 40px; height: 1px;
+    background: var(--oro);
+    margin: 1.5rem auto;
+  }
+  .paquete-features { list-style: none; color: var(--gris); font-size: 0.88rem; line-height: 2.2; }
+  .paquete-features li::before { content: '✦ '; color: var(--oro); font-size: 0.6rem; }
+  .paquete-btn {
+    display: block;
+    margin-top: 2rem;
+    padding: 0.85rem;
+    border: 1px solid var(--oro);
+    color: var(--oro);
+    text-decoration: none;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+  .paquete-btn:hover, .paquete-card.destacado .paquete-btn {
+    background: var(--oro);
+    color: var(--negro);
+  }
+  .paquete-nota {
+    text-align: center;
+    color: var(--gris);
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    font-style: italic;
+  }
+  .paquete-nota span { color: var(--oro); }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
+  /* ── COBERTURA ── */
+  #cobertura { background: var(--negro2); }
+  .cobertura-content {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: center;
+  }
+  .paises { display: flex; flex-direction: column; gap: 1.2rem; }
+  .pais-item {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: var(--negro3);
+    border-left: 2px solid var(--oro);
+  }
+  .pais-flag { font-size: 1.8rem; }
+  .pais-info-nombre {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--blanco);
+  }
+  .pais-info-detalle { font-size: 0.75rem; color: var(--gris); letter-spacing: 0.05em; }
+  .ciudades-lista { color: var(--gris); font-size: 0.9rem; }
+  .ciudades-lista h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--blanco);
+    margin-bottom: 1.5rem;
+  }
+  .ciudades-lista h4 em { color: var(--oro); font-style: italic; }
+  .ciudad-tag {
+    display: inline-block;
+    border: 1px solid rgba(201,168,76,0.2);
+    color: var(--gris);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0.7rem;
+    margin: 0.25rem;
+    transition: all 0.3s;
+  }
+  .ciudad-tag:hover { border-color: var(--oro); color: var(--oro); }
 
-.card{
-  background:#111;
-  padding:25px;
-  border:1px solid #222;
-  border-radius:10px;
-  transition:0.3s;
-}
+  /* ── TESTIMONIOS ── */
+  #testimonios { background: var(--negro); }
+  .testimonios-grid {
+    max-width: 1000px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  .testimonio-card {
+    background: var(--negro2);
+    border: 1px solid rgba(201,168,76,0.1);
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.3s;
+  }
+  .testimonio-card:hover { border-color: rgba(201,168,76,0.35); transform: translateY(-4px); }
+  .testimonio-card::before {
+    content: '"';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    color: rgba(201,168,76,0.15);
+    position: absolute;
+    top: 1rem; left: 1.5rem;
+    line-height: 1;
+  }
+  .testimonio-texto {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(245,240,232,0.9);
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+    margin-top: 1.5rem;
+  }
+  .testimonio-estrellas {
+    color: var(--oro);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    margin-top: 1.5rem;
+  }
+  .testimonio-autor {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gris);
+    margin-top: 0.5rem;
+  }
 
-.card:hover{
-  transform:translateY(-5px);
-  border-color:#C9A84C;
-}
+  /* ── CONTACTO ── */
+  #contacto {
+    background: linear-gradient(160deg, var(--negro2) 0%, var(--negro) 100%);
+    border-top: 1px solid rgba(201,168,76,0.1);
+  }
+  .contacto-content {
+    max-width: 800px; margin: 0 auto; text-align: center;
+  }
+  .contacto-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+  .contacto-titulo em { color: var(--oro); font-style: italic; }
+  .contacto-sub { color: var(--gris); font-size: 0.9rem; margin-bottom: 3rem; }
+  .whatsapp-btns {
+    display: flex; flex-wrap: wrap; gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  .wa-btn {
+    display: inline-flex; align-items: center; gap: 1rem;
+    background: var(--negro3);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 1.2rem 2rem;
+    text-decoration: none;
+    color: var(--blanco);
+    transition: all 0.3s;
+    min-width: 280px;
+  }
+  .wa-btn:hover { border-color: var(--oro); background: rgba(201,168,76,0.06); transform: translateY(-3px); }
+  .wa-icon {
+    width: 44px; height: 44px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+  .wa-info { text-align: left; }
+  .wa-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--oro);
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  .wa-numero {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--blanco);
+  }
+  .contacto-info {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 3rem;
+    border-top: 1px solid rgba(201,168,76,0.1);
+    padding-top: 2.5rem;
+  }
+  .info-item { text-align: center; }
+  .info-icon { font-size: 1.5rem; margin-bottom: 0.5rem; display: block; }
+  .info-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--oro);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .info-valor { font-size: 0.9rem; color: var(--gris); }
 
-/* EXPERIENCIA */
-.timeline{
-  max-width:900px;
-  margin:auto;
-  text-align:left;
-}
+  /* ── FOOTER ── */
+  footer {
+    background: #050505;
+    border-top: 1px solid rgba(201,168,76,0.15);
+    padding: 2.5rem 2rem;
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--oro);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+  .footer-eslogan {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gris2);
+    margin-bottom: 1.5rem;
+  }
+  .footer-linea {
+    width: 60px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--oro), transparent);
+    margin: 0 auto 1.5rem;
+  }
+  .footer-copy { font-size: 0.72rem; color: var(--gris2); letter-spacing: 0.05em; }
+  .footer-copy span { color: rgba(201,168,76,0.5); }
 
-.item{
-  background:#111;
-  margin-bottom:20px;
-  padding:20px;
-  border-left:4px solid #C9A84C;
-}
+  /* ── WHATSAPP FLOTANTE ── */
+  .wa-float {
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    z-index: 998;
+    display: flex; flex-direction: column; gap: 0.75rem;
+    align-items: flex-end;
+  }
+  .wa-float-btn {
+    display: flex; align-items: center; gap: 0.75rem;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+  .wa-float-btn:hover { transform: scale(1.05); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+  .wa-float-icon { font-size: 1.3rem; }
 
-.item h3{
-  color:#C9A84C;
-}
+  /* ── SCROLL REVEAL ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-/* CONTACTO */
-.contact{
-  background:#0f0f0f;
-}
+  /* ── HAMBURGER MOBILE ── */
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
+  .nav-toggle span { display: block; width: 24px; height: 1px; background: var(--oro); margin: 6px 0; transition: all 0.3s; }
 
-/* FOOTER */
-footer{
-  background:#000;
-  padding:30px;
-  text-align:center;
-  color:#777;
-}
-
-/* WHATSAPP */
-.wa{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  padding:15px;
-  border-radius:50px;
-  color:#fff;
-  text-decoration:none;
-  font-weight:700;
-}
-
+  @media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      display: none;
+      position: absolute; top: 68px; left: 0; right: 0;
+      background: rgba(10,10,10,0.98);
+      flex-direction: column; gap: 0;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { border-bottom: 1px solid rgba(201,168,76,0.08); }
+    .nav-links a { display: block; padding: 1rem 2rem; }
+    .nav-cta { display: none; }
+    .cobertura-content { grid-template-columns: 1fr; gap: 2rem; }
+    .wa-float { right: 1rem; bottom: 1rem; }
+    .wa-float-btn span { display: none; }
+    .wa-float-btn { padding: 0.85rem; }
+    .timeline::before { display: none; }
+    .tl-item { padding-left: 0; }
+    .tl-dot { display: none; }
+  }
 </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-<div class="hero">
-
+<!-- NAV -->
 <nav>
-  <div class="logo">GARZONES ELITE</div>
-  <div>
-    <a href="#servicios">Servicios</a>
-    <a href="#experiencia">Experiencia</a>
-    <a href="#contacto">Contacto</a>
-  </div>
+  <a class="nav-logo" href="#hero">Garzones<span> Elite</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#paquetes">Paquetes</a></li>
+    <li><a href="#cobertura">Cobertura</a></li>
+    <li><a href="#testimonios">Testimonios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a class="nav-cta" href="#contacto">Cotizar ahora</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<div class="hero-content">
-  <h1>Garzones Elite</h1>
-  <p>Servicio profesional de mozos para eventos sociales y corporativos en Perú. Elegancia, puntualidad y excelencia garantizada.</p>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-deco"></div>
+  <div class="hero-content">
+    <span class="hero-badge">✦ Servicio de Élite en el Sur del Perú ✦</span>
+    <h1 class="hero-titulo">
+      Garzones<strong>Elite</strong>
+    </h1>
+    <p class="hero-eslogan">Elegancia que se nota, servicio que se recuerda</p>
+    <p class="hero-subtitulo">Servicio profesional de mozos para eventos sociales y corporativos de alto nivel en Perú</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/51927621010?text=Hola%20Garzones%20Elite%2C%20quiero%20cotizar%20un%20evento." class="btn-primario" target="_blank">
+        📲 Cotizar por WhatsApp
+      </a>
+      <a href="#servicios" class="btn-secundario">Ver servicios ↓</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
 
-  <a class="btn" href="https://wa.me/51927621010">📲 Cotizar por WhatsApp</a>
-</div>
-
+<!-- STATS -->
+<div id="stats">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-num">6+</div>
+      <div class="stat-label">Años de experiencia</div>
+    </div>
+    <div>
+      <div class="stat-num">3</div>
+      <div class="stat-label">Países cubiertos</div>
+    </div>
+    <div>
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Compromiso en cada evento</div>
+    </div>
+    <div>
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">Disponibilidad para reservas</div>
+    </div>
+  </div>
 </div>
 
 <!-- SERVICIOS -->
 <section id="servicios">
-<h2 class="title">Servicios Premium</h2>
-
-<div class="grid">
-
-<div class="card">
-🍽️ Mozos profesionales<br>
-Atención elegante y protocolo de alto nivel.
-</div>
-
-<div class="card">
-🥂 Eventos sociales<br>
-Bodas, quinceañeros y celebraciones.
-</div>
-
-<div class="card">
-🏢 Eventos corporativos<br>
-Empresas, congresos y cenas ejecutivas.
-</div>
-
-<div class="card">
-🍰 Buffet & catering<br>
-Servicio completo de atención en mesa.
-</div>
-
-</div>
+  <div class="section-header reveal">
+    <p class="section-eyebrow">✦ Lo que ofrecemos ✦</p>
+    <h2 class="section-titulo">Nuestros <em>Servicios</em></h2>
+    <p class="section-desc">Cada evento merece atención de primer nivel. Contamos con personal capacitado en protocolo y servicio de élite.</p>
+  </div>
+  <div class="servicios-grid reveal">
+    <div class="servicio-card">
+      <span class="servicio-icon">🍽️</span>
+      <h3 class="servicio-titulo">Mozos Profesionales</h3>
+      <p class="servicio-desc">Personal capacitado en protocolo, atención elegante y servicio de mesa de alto nivel para cualquier tipo de evento.</p>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icon">🥂</span>
+      <h3 class="servicio-titulo">Eventos Sociales</h3>
+      <p class="servicio-desc">Bodas, quinceañeros, aniversarios y celebraciones familiares con atención impecable e irrepetible.</p>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icon">🏢</span>
+      <h3 class="servicio-titulo">Eventos Corporativos</h3>
+      <p class="servicio-desc">Congresos, reuniones empresariales, cenas ejecutivas y lanzamientos con imagen profesional garantizada.</p>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icon">🍰</span>
+      <h3 class="servicio-titulo">Servicio de Buffet</h3>
+      <p class="servicio-desc">Atención en mesas, autoservicio, banquetes y coffee break con orden, rapidez y elegancia.</p>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icon">🤝</span>
+      <h3 class="servicio-titulo">Atención VIP</h3>
+      <p class="servicio-desc">Servicio exclusivo para clientes especiales y eventos privados donde cada detalle cuenta.</p>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icon">📍</span>
+      <h3 class="servicio-titulo">Cobertura Regional</h3>
+      <p class="servicio-desc">Atención en Puno, todo el sur del Perú y zonas fronterizas con Bolivia y Chile.</p>
+    </div>
+  </div>
 </section>
 
 <!-- EXPERIENCIA -->
 <section id="experiencia">
-<h2 class="title">Experiencia 2020 - 2026</h2>
+  <div class="section-header reveal">
+    <p class="section-eyebrow">✦ Nuestra trayectoria ✦</p>
+    <h2 class="section-titulo">Años de <em>Experiencia</em></h2>
+    <p class="section-desc">Más de 6 años perfeccionando el arte del servicio en eventos de todo nivel a lo largo del sur del Perú.</p>
+  </div>
+  <div class="timeline reveal">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-fecha">2020 – 2021</div>
+      <h3 class="tl-titulo">Inicios y Disciplina</h3>
+      <p class="tl-desc">Inicio en eventos sociales durante la pandemia, trabajando bajo estrictos protocolos de bioseguridad. Se forjaron valores fundamentales: disciplina, responsabilidad y adaptación ante cualquier circunstancia.</p>
+      <div class="tl-tags">
+        <span class="tl-tag">Protocolo</span>
+        <span class="tl-tag">Responsabilidad</span>
+        <span class="tl-tag">Bioseguridad</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-fecha">2021 – 2024</div>
+      <h3 class="tl-titulo">Expansión en el Sur del Perú</h3>
+      <p class="tl-desc">Experiencia sólida en Puno, Juli, Ilave, Desaguadero, Yunguyo, Zepita, Pomata y Juliaca. Expansión a Arequipa, Tacna, Moquegua, Andahuaylas y apoyo en Bolivia y Chile.</p>
+      <div class="tl-tags">
+        <span class="tl-tag">Matrimonios</span>
+        <span class="tl-tag">Bautizos</span>
+        <span class="tl-tag">Graduaciones</span>
+        <span class="tl-tag">Corporativos</span>
+        <span class="tl-tag">Eventos masivos</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-fecha">2024 – 2026</div>
+      <h3 class="tl-titulo">Consolidación Profesional</h3>
+      <p class="tl-desc">Participación en eventos de mayor nivel y mega eventos en el sur del Perú. Desarrollo de habilidades avanzadas en atención VIP, coordinación de eventos y trabajo bajo presión.</p>
+      <div class="tl-tags">
+        <span class="tl-tag">Atención VIP</span>
+        <span class="tl-tag">Coordinación</span>
+        <span class="tl-tag">Alto nivel</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-fecha">2026 – Actualidad</div>
+      <h3 class="tl-titulo">Garzones Elite (Fundadores)</h3>
+      <p class="tl-desc">Creación del equipo independiente <strong style="color:var(--oro)">Garzones Elite</strong>. Equipo formado por personal con experiencia y jóvenes capacitados. Enfoque en servicio responsable, atención profesional y calidad en eventos sociales y corporativos.</p>
+      <div class="tl-tags">
+        <span class="tl-tag">Servicio responsable</span>
+        <span class="tl-tag">Atención profesional</span>
+        <span class="tl-tag">Alta calidad</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="timeline">
+<!-- PAQUETES -->
+<section id="paquetes">
+  <div class="section-header reveal">
+    <p class="section-eyebrow">✦ Tarifas ✦</p>
+    <h2 class="section-titulo">Nuestros <em>Paquetes</em></h2>
+    <p class="section-desc">Precios transparentes y flexibles para cada tipo de evento. Siempre adaptados a tus necesidades.</p>
+  </div>
+  <div class="paquetes-grid reveal">
+    <div class="paquete-card">
+      <div class="paquete-nombre">Plan Básico</div>
+      <div class="paquete-precio"><sup>S/</sup>150<span>/aprox</span></div>
+      <div class="paquete-divider"></div>
+      <ul class="paquete-features">
+        <li>1 mozo profesional</li>
+        <li>8 horas de servicio</li>
+        <li>Uniforme elegante</li>
+        <li>Protocolo de servicio</li>
+      </ul>
+      <a href="https://wa.me/51927621010?text=Hola%20Garzones%20Elite%2C%20quiero%20cotizar%20el%20Plan%20B%C3%A1sico." class="paquete-btn" target="_blank">Cotizar ahora</a>
+    </div>
+    <div class="paquete-card destacado">
+      <div class="paquete-nombre">Plan Personalizado</div>
+      <div class="paquete-precio" style="font-size:2rem; padding-top:0.5rem;">A tu medida</div>
+      <div class="paquete-divider"></div>
+      <ul class="paquete-features">
+        <li>Equipo según tamaño del evento</li>
+        <li>Horas adaptadas a tu agenda</li>
+        <li>Coordinación incluida</li>
+        <li>Atención VIP disponible</li>
+        <li>Cobertura regional</li>
+      </ul>
+      <a href="https://wa.me/51927621010?text=Hola%20Garzones%20Elite%2C%20quiero%20cotizar%20un%20servicio%20personalizado." class="paquete-btn" target="_blank">Solicitar cotización</a>
+    </div>
+  </div>
+  <p class="paquete-nota reveal">✦ Los precios son <span>negociables</span> según el tipo y tamaño del evento. ✦</p>
+</section>
 
-<div class="item">
-<h3>2024 - 2026</h3>
-<p>Garzones Elite - servicio independiente de alto nivel en eventos sociales y corporativos.</p>
-</div>
+<!-- COBERTURA -->
+<section id="cobertura">
+  <div class="section-header reveal">
+    <p class="section-eyebrow">✦ Dónde estamos ✦</p>
+    <h2 class="section-titulo">Nuestra <em>Cobertura</em></h2>
+  </div>
+  <div class="cobertura-content reveal">
+    <div class="paises">
+      <div class="pais-item">
+        <span class="pais-flag">🇵🇪</span>
+        <div>
+          <div class="pais-info-nombre">Perú</div>
+          <div class="pais-info-detalle">Cobertura principal — Sur del país</div>
+        </div>
+      </div>
+      <div class="pais-item">
+        <span class="pais-flag">🇧🇴</span>
+        <div>
+          <div class="pais-info-nombre">Bolivia</div>
+          <div class="pais-info-detalle">Zonas fronterizas</div>
+        </div>
+      </div>
+      <div class="pais-item">
+        <span class="pais-flag">🇨🇱</span>
+        <div>
+          <div class="pais-info-nombre">Chile</div>
+          <div class="pais-info-detalle">Zonas cercanas a la frontera</div>
+        </div>
+      </div>
+    </div>
+    <div class="ciudades-lista">
+      <h4>Ciudades donde <em>operamos</em></h4>
+      <span class="ciudad-tag">Puno</span>
+      <span class="ciudad-tag">Juliaca</span>
+      <span class="ciudad-tag">Juli</span>
+      <span class="ciudad-tag">Ilave</span>
+      <span class="ciudad-tag">Desaguadero</span>
+      <span class="ciudad-tag">Yunguyo</span>
+      <span class="ciudad-tag">Zepita</span>
+      <span class="ciudad-tag">Pomata</span>
+      <span class="ciudad-tag">Arequipa</span>
+      <span class="ciudad-tag">Tacna</span>
+      <span class="ciudad-tag">Moquegua</span>
+      <span class="ciudad-tag">Andahuaylas</span>
+    </div>
+  </div>
+</section>
 
-<div class="item">
-<h3>2022 - 2024</h3>
-<p>Experiencia en eventos masivos, protocolo de mesa y atención VIP.</p>
-</div>
-
-<div class="item">
-<h3>2020 - 2022</h3>
-<p>Inicio en eventos sociales, aprendizaje en servicio y atención al cliente.</p>
-</div>
-
-</div>
+<!-- TESTIMONIOS -->
+<section id="testimonios">
+  <div class="section-header reveal">
+    <p class="section-eyebrow">✦ Lo que dicen nuestros clientes ✦</p>
+    <h2 class="section-titulo">Testimonios <em>Reales</em></h2>
+  </div>
+  <div class="testimonios-grid reveal">
+    <div class="testimonio-card">
+      <p class="testimonio-texto">Muy puntuales y elegantes en el servicio, excelente atención. Nuestro evento fue perfecto gracias a Garzones Elite.</p>
+      <div class="testimonio-estrellas">★ ★ ★ ★ ★</div>
+      <div class="testimonio-autor">— Cliente satisfecho</div>
+    </div>
+    <div class="testimonio-card">
+      <p class="testimonio-texto">Recomendados al 100%. Hicieron que nuestro evento sea perfecto, desde la llegada hasta el último minuto.</p>
+      <div class="testimonio-estrellas">★ ★ ★ ★ ★</div>
+      <div class="testimonio-autor">— Evento social, Puno</div>
+    </div>
+    <div class="testimonio-card">
+      <p class="testimonio-texto">Profesionales, responsables y muy atentos con los invitados. Un equipo que transmite confianza y elegancia total.</p>
+      <div class="testimonio-estrellas">★ ★ ★ ★ ★</div>
+      <div class="testimonio-autor">— Evento corporativo</div>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACTO -->
-<section id="contacto" class="contact">
-<h2 class="title">Contacto</h2>
-<p>📍 Puno - Perú</p>
-<p>📲 WhatsApp: +51 927 621 010</p>
-<p>📲 WhatsApp: +51 935 965 552</p>
+<section id="contacto">
+  <div class="contacto-content reveal">
+    <p class="section-eyebrow" style="margin-bottom:1rem;">✦ Escríbenos hoy ✦</p>
+    <h2 class="contacto-titulo">¿Listo para tu <em>evento perfecto</em>?</h2>
+    <p class="contacto-sub">Escríbenos por WhatsApp y recibe tu cotización en minutos. Atención 24/7.</p>
+    <div class="whatsapp-btns">
+      <a href="https://wa.me/51927621010?text=Hola%20Garzones%20Elite%2C%20quiero%20cotizar%20un%20evento." class="wa-btn" target="_blank">
+        <span class="wa-icon">💬</span>
+        <span class="wa-info">
+          <span class="wa-label">WhatsApp 1 — Contacto principal</span>
+          <span class="wa-numero">+51 927 621 010</span>
+        </span>
+      </a>
+      <a href="https://wa.me/51935965552?text=Hola%20Garzones%20Elite%2C%20quiero%20cotizar%20un%20evento." class="wa-btn" target="_blank">
+        <span class="wa-icon">💬</span>
+        <span class="wa-info">
+          <span class="wa-label">WhatsApp 2 — Contacto alternativo</span>
+          <span class="wa-numero">+51 935 965 552</span>
+        </span>
+      </a>
+    </div>
+    <div class="contacto-info">
+      <div class="info-item">
+        <span class="info-icon">📍</span>
+        <span class="info-label">Ubicación</span>
+        <span class="info-valor">Puno, Perú</span>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">🕐</span>
+        <span class="info-label">Atención</span>
+        <span class="info-valor">24/7 para reservas</span>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">🌍</span>
+        <span class="info-label">Cobertura</span>
+        <span class="info-valor">Sur del Perú y fronteras</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-© 2026 Garzones Elite — Elegancia que se nota, servicio que se recuerda.
+  <div class="footer-logo">GARZONES ELITE</div>
+  <div class="footer-eslogan">Elegancia que se nota, servicio que se recuerda</div>
+  <div class="footer-linea"></div>
+  <p class="footer-copy">© 2026 Garzones Elite — Puno, Perú <span>✦</span> Todos los derechos reservados</p>
 </footer>
 
-<!-- WHATSAPP -->
-<a class="wa" href="https://wa.me/51927621010">WhatsApp</a>
+<!-- WHATSAPP FLOTANTE -->
+<div class="wa-float">
+  <a href="https://wa.me/51927621010?text=Hola%20Garzones%20Elite%2C%20quiero%20cotizar%20un%20evento." class="wa-float-btn" target="_blank">
+    <span class="wa-float-icon">💬</span>
+    <span>+51 927 621 010</span>
+  </a>
+  <a href="https://wa.me/51935965552?text=Hola%20Garzones%20Elite%2C%20quiero%20cotizar%20un%20evento." class="wa-float-btn" target="_blank">
+    <span class="wa-float-icon">💬</span>
+    <span>+51 935 965 552</span>
+  </a>
+</div>
 
+<script>
+  // NAV MOBILE
+  const toggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // SCROLL REVEAL
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        // stagger children
+        e.target.querySelectorAll('.servicio-card, .paquete-card, .testimonio-card, .tl-item, .pais-item').forEach((child, i) => {
+          child.style.transitionDelay = `${i * 0.1}s`;
+        });
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // COUNTER ANIMATION
+  function animateCount(el, target, suffix='') {
+    let start = 0;
+    const step = target / 60;
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) { el.textContent = target + suffix; clearInterval(timer); return; }
+      el.textContent = Math.floor(start) + suffix;
+    }, 25);
+  }
+
+  const statsObs = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      document.querySelectorAll('.stat-num').forEach(el => {
+        const raw = el.textContent;
+        if (raw.includes('+')) animateCount(el, parseInt(raw), '+');
+        else if (raw.includes('%')) animateCount(el, parseInt(raw), '%');
+      });
+      statsObs.disconnect();
+    }
+  }, { threshold: 0.5 });
+  statsObs.observe(document.getElementById('stats'));
+</script>
 </body>
 </html>
