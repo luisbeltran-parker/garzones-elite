@@ -1,1196 +1,253 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Garzones Elite — Servicio Profesional de Mozos | Puno, Perú</title>
-  <meta name="description" content="Servicio profesional de mozos para eventos sociales y corporativos en Perú, Bolivia y Chile. Elegancia que se nota, servicio que se recuerda."/>
-  <meta name="keywords" content="mozos profesionales, garzones, eventos Puno, servicio de meseros, bodas Puno, eventos corporativos Peru"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Garzones Elite | Mozos Profesionales para Eventos</title>
+
+  <meta name="description" content="Servicio profesional de mozos para eventos sociales y corporativos. Elegancia, puntualidad y atención de alto nivel en Perú.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root {
-      --gold: #C9A84C;
-      --gold-light: #E8C96A;
-      --gold-dark: #8B6914;
-      --black: #0A0A0A;
-      --black-soft: #111111;
-      --black-mid: #1A1A1A;
-      --white: #F5F0E8;
-      --white-dim: #B0A898;
-      --red-peru: #D91023;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
 
     body {
-      background: var(--black);
-      color: var(--white);
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 300;
-      overflow-x: hidden;
+      background: #0b0b0b;
+      color: white;
     }
 
-    /* ── GOLDEN LINE ── */
-    .gold-line {
-      width: 60px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      margin: 0 auto;
-    }
-    .gold-line-left {
-      width: 60px;
-      height: 1px;
-      background: linear-gradient(90deg, var(--gold), transparent);
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+                  url('imagenes/garzones-elite-eventos.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
     }
 
-    /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
+    /* NAV */
+    header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 60px;
-      background: linear-gradient(180deg, rgba(0,0,0,0.95) 0%, transparent 100%);
-      backdrop-filter: blur(4px);
+      padding: 20px 50px;
     }
 
-    .nav-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      font-weight: 600;
-      letter-spacing: 3px;
-      color: var(--gold);
-      text-transform: uppercase;
+    .logo {
+      height: 60px;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 40px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--white-dim);
+    nav a {
+      color: white;
       text-decoration: none;
-      font-size: 0.7rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      transition: color 0.3s;
+      margin-left: 20px;
+      font-size: 0.9rem;
     }
 
-    .nav-links a:hover { color: var(--gold); }
-
-    /* ── HERO ── */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      text-align: center;
-      padding: 120px 40px 80px;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 60%),
-        linear-gradient(180deg, #0A0A0A 0%, #111111 100%);
-      overflow: hidden;
+    nav a:hover {
+      color: #C9A84C;
     }
 
-    /* Decorative corner lines */
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 80px; left: 60px;
-      width: 80px; height: 80px;
-      border-top: 1px solid var(--gold);
-      border-left: 1px solid var(--gold);
-      opacity: 0.4;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: 80px; right: 60px;
-      width: 80px; height: 80px;
-      border-bottom: 1px solid var(--gold);
-      border-right: 1px solid var(--gold);
-      opacity: 0.4;
-    }
-
-    .hero-crown {
-      font-size: 2rem;
-      color: var(--gold);
-      margin-bottom: 24px;
-      animation: fadeDown 1s ease both;
-    }
-
-    .hero-eyebrow {
-      font-size: 0.65rem;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 20px;
-      animation: fadeDown 1s ease 0.2s both;
-    }
-
-    .hero-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(3.5rem, 10vw, 7rem);
-      font-weight: 700;
-      letter-spacing: 8px;
-      line-height: 0.9;
-      color: var(--white);
-      text-transform: uppercase;
-      animation: fadeDown 1s ease 0.3s both;
-    }
-
-    .hero-logo span {
-      display: block;
-      font-size: clamp(1.2rem, 3vw, 2rem);
-      letter-spacing: 12px;
-      font-weight: 400;
-      color: var(--gold);
-      margin-top: 8px;
-    }
-
-    .hero-tagline {
-      margin-top: 32px;
-      font-size: clamp(0.8rem, 1.5vw, 1rem);
-      letter-spacing: 2px;
-      color: var(--white-dim);
-      font-weight: 300;
-      animation: fadeDown 1s ease 0.5s both;
-    }
-
-    .hero-tagline strong {
-      color: var(--gold);
-      font-weight: 600;
-    }
-
-    .hero-slogan {
-      margin-top: 40px;
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-      color: var(--gold-light);
-      animation: fadeDown 1s ease 0.7s both;
-    }
-
-    /* Coverage flags */
-    .coverage {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0;
-      margin-top: 48px;
-      animation: fadeDown 1s ease 0.9s both;
-    }
-
-    .coverage-item {
+    /* HERO CONTENT */
+    .hero-content {
+      flex: 1;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      padding: 0 28px;
-      position: relative;
-    }
-
-    .coverage-item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      right: 0; top: 50%;
-      transform: translateY(-50%);
-      height: 30px;
-      width: 1px;
-      background: var(--gold-dark);
-    }
-
-    .coverage-flag {
-      font-size: 1.8rem;
-      margin-bottom: 4px;
-    }
-
-    .coverage-name {
-      font-size: 0.6rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--white-dim);
-    }
-
-    .coverage-item.primary .coverage-name {
-      color: var(--gold);
-      font-weight: 600;
-    }
-
-    .coverage-item.primary .coverage-flag {
-      font-size: 2.4rem;
-      filter: drop-shadow(0 0 12px rgba(201,168,76,0.5));
-    }
-
-    /* Peru emphasis badge */
-    .peru-badge {
-      display: inline-block;
-      margin-top: 8px;
-      font-size: 0.55rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--red-peru);
-      border: 1px solid var(--red-peru);
-      padding: 2px 8px;
-      border-radius: 2px;
-    }
-
-    .hero-cta {
-      margin-top: 52px;
-      display: flex;
-      gap: 20px;
       justify-content: center;
-      flex-wrap: wrap;
-      animation: fadeDown 1s ease 1.1s both;
-    }
-
-    .btn-gold {
-      display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 14px 36px;
-      background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
-      color: var(--black);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      color: #C9A84C;
+    }
+
+    .hero-content p {
+      margin: 10px 0;
+      color: #ddd;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #C9A84C;
+      color: black;
       text-decoration: none;
-      transition: all 0.3s;
-      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+      font-weight: bold;
+      border-radius: 30px;
     }
 
-    .btn-gold:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(201,168,76,0.4);
-    }
-
-    .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 13px 36px;
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.3s;
-      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
-    }
-
-    .btn-outline:hover {
-      background: rgba(201,168,76,0.1);
-      transform: translateY(-2px);
-    }
-
-    /* ── SECTION BASE ── */
     section {
-      padding: 100px 60px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-eyebrow {
-      font-size: 0.6rem;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 12px;
+      padding: 80px 40px;
+      text-align: center;
     }
 
     .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 600;
-      line-height: 1.1;
-      margin-bottom: 16px;
+      font-size: 2rem;
+      color: #C9A84C;
+      margin-bottom: 30px;
     }
 
-    .section-subtitle {
-      font-size: 0.85rem;
-      color: var(--white-dim);
-      line-height: 1.8;
-      max-width: 560px;
-    }
-
-    .section-divider {
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3), transparent);
-      margin: 0 auto;
-    }
-
-    /* ── SERVICES ── */
-    #servicios { background: transparent; }
-
-    .services-grid {
+    /* CARDS */
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2px;
-      margin-top: 60px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
-    .service-card {
-      background: var(--black-mid);
-      padding: 48px 32px;
-      text-align: center;
-      position: relative;
-      transition: background 0.3s;
-      border-top: 1px solid rgba(201,168,76,0.15);
+    .card {
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #222;
     }
 
-    .service-card:hover {
-      background: #1E1A14;
-    }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .service-card:hover::before { opacity: 1; }
-
-    .service-icon {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      display: block;
-    }
-
-    .service-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--gold-light);
-      margin-bottom: 12px;
-      letter-spacing: 1px;
-    }
-
-    .service-desc {
-      font-size: 0.75rem;
-      color: var(--white-dim);
-      line-height: 1.8;
-    }
-
-    /* ── EXPERIENCE ── */
-    #experiencia {
-      background: linear-gradient(180deg, #0A0A0A 0%, #0D0D0D 100%);
-      max-width: 100%;
-      padding: 100px 0;
-    }
-
-    #experiencia > .inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 60px;
-    }
-
+    /* EXPERIENCIA */
     .timeline {
-      margin-top: 60px;
-      position: relative;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 1px;
-      background: linear-gradient(180deg, transparent, var(--gold), transparent);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
     }
 
     .timeline-item {
-      padding: 0 0 52px 48px;
-      position: relative;
+      background: #111;
+      padding: 20px;
+      border-left: 3px solid #C9A84C;
+      text-align: left;
     }
 
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -4px; top: 6px;
-      width: 9px; height: 9px;
-      background: var(--gold);
-      border-radius: 50%;
-      box-shadow: 0 0 0 4px rgba(201,168,76,0.15);
+    .timeline-item h3 {
+      color: #C9A84C;
     }
 
-    .timeline-period {
-      font-size: 0.6rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 8px;
+    .timeline-item h4 {
+      margin: 5px 0;
     }
 
-    .timeline-role {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-
-    .timeline-place {
-      font-size: 0.75rem;
-      color: var(--white-dim);
-      margin-bottom: 14px;
-      letter-spacing: 1px;
-    }
-
-    .timeline-desc {
-      font-size: 0.8rem;
-      color: var(--white-dim);
-      line-height: 1.9;
-    }
-
-    .timeline-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 16px;
-    }
-
-    .tag {
-      font-size: 0.6rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-      border: 1px solid rgba(201,168,76,0.25);
-      padding: 4px 12px;
-    }
-
-    /* ── SKILLS ── */
-    #habilidades { }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
-      margin-top: 60px;
-    }
-
-    .skill-block { }
-
-    .skill-label {
-      font-size: 0.7rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--white-dim);
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .skill-label span { color: var(--gold); }
-
-    .skill-bar {
-      height: 2px;
-      background: rgba(255,255,255,0.08);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .skill-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--gold-dark), var(--gold));
-      transform-origin: left;
-      animation: fillBar 1.5s ease forwards;
-    }
-
-    @keyframes fillBar {
-      from { transform: scaleX(0); }
-      to { transform: scaleX(1); }
-    }
-
-    /* ── COBERTURA ── */
-    #cobertura {
-      background: var(--black-mid);
-      max-width: 100%;
-      padding: 80px 0;
-    }
-
-    #cobertura > .inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 60px;
-    }
-
-    .coverage-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      margin-top: 60px;
-    }
-
-    .coverage-card {
-      background: var(--black);
-      padding: 48px 40px;
-      text-align: center;
-      border-top: 1px solid rgba(201,168,76,0.1);
-      transition: border-color 0.3s;
-    }
-
-    .coverage-card.featured {
-      background: linear-gradient(145deg, #151005, #1A1205);
-      border-top-color: var(--gold);
-    }
-
-    .coverage-card:hover {
-      border-top-color: var(--gold);
-    }
-
-    .coverage-card-flag {
-      font-size: 3rem;
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .coverage-card.featured .coverage-card-flag {
-      font-size: 4rem;
-      filter: drop-shadow(0 0 20px rgba(201,168,76,0.6));
-    }
-
-    .coverage-card-country {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .coverage-card.featured .coverage-card-country {
-      color: var(--gold);
-    }
-
-    .coverage-card-detail {
-      font-size: 0.7rem;
-      color: var(--white-dim);
-      letter-spacing: 1px;
-      line-height: 1.8;
-    }
-
-    .featured-badge {
-      display: inline-block;
-      margin-top: 12px;
-      font-size: 0.55rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--black);
-      background: var(--gold);
-      padding: 4px 14px;
-    }
-
-    /* ── GITHUB SECTION ── */
-    #github {
-      background: linear-gradient(135deg, #0A0A0A 0%, #0D0B05 100%);
-      max-width: 100%;
-      padding: 80px 0;
-      border-top: 1px solid rgba(201,168,76,0.15);
-    }
-
-    #github > .inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 60px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .github-text .section-subtitle { max-width: 400px; }
-
-    .github-card {
-      background: #0D1117;
-      border: 1px solid rgba(201,168,76,0.2);
-      border-radius: 4px;
-      padding: 28px;
-      transition: border-color 0.3s;
-    }
-
-    .github-card:hover {
-      border-color: var(--gold);
-    }
-
-    .github-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 20px;
-    }
-
-    .github-avatar {
-      width: 48px; height: 48px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--black);
-    }
-
-    .github-username {
+    .timeline-item p {
+      color: #bbb;
       font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--white);
+      line-height: 1.6;
     }
 
-    .github-handle {
-      font-size: 0.7rem;
-      color: var(--white-dim);
-      margin-top: 2px;
+    /* CONTACTO */
+    .contact {
+      background: #0f0f0f;
     }
 
-    .github-bio {
-      font-size: 0.75rem;
-      color: var(--white-dim);
-      line-height: 1.7;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .github-stats {
-      display: flex;
-      gap: 24px;
-    }
-
-    .github-stat {
-      text-align: center;
-    }
-
-    .github-stat-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--gold);
-    }
-
-    .github-stat-label {
-      font-size: 0.6rem;
-      color: var(--white-dim);
-      letter-spacing: 1px;
-      margin-top: 2px;
-    }
-
-    .github-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 20px;
-      font-size: 0.65rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      text-decoration: none;
-      transition: gap 0.3s;
-    }
-
-    .github-link:hover { gap: 14px; }
-
-    /* ── CONTACT ── */
-    #contacto {
-      background: var(--black-soft);
-      max-width: 100%;
-      padding: 100px 0;
-    }
-
-    #contacto > .inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 60px;
-      text-align: center;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2px;
-      margin-top: 60px;
-    }
-
-    .contact-item {
-      background: var(--black);
-      padding: 40px 28px;
-      text-align: center;
-      border-top: 1px solid rgba(201,168,76,0.1);
-      transition: border-color 0.3s, background 0.3s;
-    }
-
-    .contact-item:hover {
-      background: #141005;
-      border-top-color: var(--gold);
-    }
-
-    .contact-icon {
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .contact-label {
-      font-size: 0.6rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-
-    .contact-value {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--white);
-      line-height: 1.5;
-    }
-
-    .contact-sub {
-      font-size: 0.7rem;
-      color: var(--white-dim);
-      margin-top: 6px;
-    }
-
-    .whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 16px;
-      padding: 10px 24px;
-      background: #25D366;
-      color: #fff;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 2px;
-      transition: opacity 0.3s;
-    }
-
-    .whatsapp-btn:hover { opacity: 0.85; }
-
-    /* ── FOOTER ── */
     footer {
-      background: var(--black);
-      border-top: 1px solid rgba(201,168,76,0.15);
-      padding: 40px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
+      background: black;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
     }
 
-    .footer-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      letter-spacing: 4px;
-      color: var(--gold);
-      text-transform: uppercase;
-    }
-
-    .footer-slogan {
-      font-size: 0.65rem;
-      color: var(--white-dim);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-top: 4px;
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 20px;
-    }
-
-    .footer-social a {
-      font-size: 0.65rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--white-dim);
+    /* WHATSAPP FLOAT */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px 18px;
+      border-radius: 50px;
       text-decoration: none;
-      transition: color 0.3s;
+      font-weight: bold;
     }
 
-    .footer-social a:hover { color: var(--gold); }
-
-    .footer-copy {
-      font-size: 0.6rem;
-      color: rgba(255,255,255,0.2);
-      letter-spacing: 1px;
-    }
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      nav { padding: 16px 24px; }
-      .nav-links { display: none; }
-      section { padding: 70px 24px; }
-      #experiencia > .inner,
-      #cobertura > .inner,
-      #github > .inner,
-      #contacto > .inner { padding: 0 24px; }
-      #github > .inner { grid-template-columns: 1fr; gap: 40px; }
-      .coverage-cards { grid-template-columns: 1fr; }
-      footer { flex-direction: column; text-align: center; padding: 32px 24px; }
-      .hero::before, .hero::after { display: none; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation: none !important; transition: none !important; }
-    }
   </style>
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-brand">GE</div>
-  <ul class="nav-links">
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#experiencia">Experiencia</a></li>
-    <li><a href="#cobertura">Cobertura</a></li>
-    <li><a href="#github">Perfil</a></li>
-    <li><a href="#contacto">Reservas</a></li>
-  </ul>
-</nav>
+  <!-- HERO -->
+  <div class="hero">
 
-<!-- HERO -->
-<div class="hero">
-  <div>
-    <div class="hero-crown">♛</div>
-    <p class="hero-eyebrow">Servicio Profesional de Mozos</p>
-    <h1 class="hero-logo">
-      Garzones
-      <span>— Elite —</span>
-    </h1>
-    <p class="hero-tagline">Para <strong>Eventos Sociales</strong> &nbsp;·&nbsp; <strong>Corporativos</strong> &nbsp;·&nbsp; <strong>Bodas & Galas</strong></p>
-    <p class="hero-slogan">"Elegancia que se nota, servicio que se recuerda"</p>
+    <header>
+      <img src="imagenes/logo.png" class="logo" alt="Logo">
+      <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
 
-    <div class="coverage">
-      <div class="coverage-item">
-        <span class="coverage-flag">🇧🇴</span>
-        <span class="coverage-name">Bolivia</span>
-      </div>
-      <div class="coverage-item primary">
-        <span class="coverage-flag">🇵🇪</span>
-        <span class="coverage-name">Perú</span>
-        <span class="peru-badge">Sede Principal</span>
-      </div>
-      <div class="coverage-item">
-        <span class="coverage-flag">🇨🇱</span>
-        <span class="coverage-name">Chile</span>
-      </div>
+    <div class="hero-content">
+      <h1>Garzones Elite</h1>
+      <p>Servicio profesional de mozos para eventos elegantes</p>
+      <a href="https://wa.me/51927621010" class="btn">Cotizar por WhatsApp</a>
     </div>
 
-    <div class="hero-cta">
-      <a href="https://wa.me/51927621010" target="_blank" class="btn-gold">📲 Reservar Ahora</a>
-      <a href="#experiencia" class="btn-outline">Ver Experiencia</a>
-    </div>
   </div>
-</div>
 
-<div class="section-divider"></div>
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <h2 class="section-title">Servicios</h2>
 
-<!-- SERVICIOS -->
-<section id="servicios">
-  <p class="section-eyebrow">Lo que ofrecemos</p>
-  <h2 class="section-title">Nuestros Servicios</h2>
-  <p class="section-subtitle">Mozos de alta etiqueta con formación profesional para todo tipo de evento. Presentación impecable, protocolo riguroso.</p>
+    <div class="grid">
+      <div class="card">Mozos para eventos sociales</div>
+      <div class="card">Eventos corporativos</div>
+      <div class="card">Servicio de buffet</div>
+    </div>
+  </section>
 
-  <div class="services-grid">
-    <div class="service-card">
-      <span class="service-icon">🤵</span>
-      <div class="service-name">Mozos Profesionales</div>
-      <p class="service-desc">Personal uniformado de etiqueta, con guantes blancos y protocolo de servicio de alta gama para cualquier tipo de evento.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">🍽️</span>
-      <div class="service-name">Servicio de Banquete</div>
-      <p class="service-desc">Atención en buffet, cena de gala, menú a la carta y coffee break. Montaje y desmontaje incluidos bajo supervisión.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">🥂</span>
-      <div class="service-name">Eventos Sociales</div>
-      <p class="service-desc">Bodas, quinceañeros, aniversarios y reuniones familiares con el nivel de servicio que sus invitados recordarán.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">🏢</span>
-      <div class="service-name">Eventos Corporativos</div>
-      <p class="service-desc">Lanzamientos, congresos, cenas directivas y actividades empresariales con protocolo formal y discreción total.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">🤝</span>
-      <div class="service-name">Confianza Total</div>
-      <p class="service-desc">Personal con referencias verificadas, puntualidad garantizada y compromiso profesional desde la primera coordinación.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">📍</span>
-      <div class="service-name">Cobertura Regional</div>
-      <p class="service-desc">Atención en Puno, Ilave, Desaguadero, Juliaca, Tacna, Arequipa y zonas fronterizas con Bolivia y Chile.</p>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- EXPERIENCIA -->
-<div id="experiencia">
-  <div class="inner">
-    <p class="section-eyebrow">Trayectoria profesional</p>
-    <h2 class="section-title">Experiencia en el Sector</h2>
-    <p class="section-subtitle">Más de cuatro años de servicio activo en los principales grupos de eventos y establecimientos de la región sur del Perú.</p>
+  <!-- EXPERIENCIA -->
+  <section id="experiencia">
+    <h2 class="section-title">Experiencia Profesional</h2>
 
     <div class="timeline">
 
       <div class="timeline-item">
-        <p class="timeline-period">2022 — Actualidad</p>
-        <h3 class="timeline-role">Mozo Profesional Independiente</h3>
-        <p class="timeline-place">Puno, Ilave, Desaguadero · Tacna · Arequipa</p>
-        <p class="timeline-desc">
-          Prestación de servicios en restaurantes de categoría, buffets, banquetes y eventos privados de alto perfil en la región sur del Perú. Coordinación con organizadores de eventos para garantizar atención de calidad en fechas de alta demanda, con desplazamiento hacia Tacna y Arequipa para refuerzo de equipos en temporadas especiales.
-        </p>
-        <div class="timeline-tags">
-          <span class="tag">Buffet</span>
-          <span class="tag">Banquetes</span>
-          <span class="tag">Alta Etiqueta</span>
-          <span class="tag">Movilidad Interprovincial</span>
-        </div>
+        <h3>2024 – 2026</h3>
+        <h4>Garzones Elite | Servicio Independiente</h4>
+        <p>Atención en eventos sociales, bodas, corporativos y servicio VIP.</p>
       </div>
 
       <div class="timeline-item">
-        <p class="timeline-period">2020 — 2022</p>
-        <h3 class="timeline-role">Mozo de Eventos · Grupo "La Elegancia"</h3>
-        <p class="timeline-place">Puno, Perú</p>
-        <p class="timeline-desc">
-          Integración al equipo de uno de los grupos de servicio de eventos más reconocidos de la ciudad de Puno. Participación en bodas, eventos institucionales y galas corporativas. Formación en protocolo de servicio, presentación de etiqueta y manejo de sala bajo estándares de exigencia alta.
-        </p>
-        <div class="timeline-tags">
-          <span class="tag">Protocolo de Sala</span>
-          <span class="tag">Bodas</span>
-          <span class="tag">Eventos Institucionales</span>
-          <span class="tag">Formación en Etiqueta</span>
-        </div>
+        <h3>2022 – 2024</h3>
+        <h4>Mozo Profesional</h4>
+        <p>Servicio en eventos de alta demanda, protocolo y atención al cliente.</p>
       </div>
 
       <div class="timeline-item">
-        <p class="timeline-period">2020 — 2022</p>
-        <h3 class="timeline-role">Mozo de Eventos · Grupo "Los Elegidos"</h3>
-        <p class="timeline-place">Puno, Perú</p>
-        <p class="timeline-desc">
-          Participación simultánea en grupo de élite especializado en atención para eventos de lujo y celebraciones de alta convocatoria. Refuerzo de habilidades en servicio simultáneo a múltiples mesas, manejo de bandejas, protocolo de bebidas y coordinación de equipo en sala.
-        </p>
-        <div class="timeline-tags">
-          <span class="tag">Eventos de Lujo</span>
-          <span class="tag">Servicio de Sala</span>
-          <span class="tag">Trabajo en Equipo</span>
-          <span class="tag">Alta Demanda</span>
-        </div>
+        <h3>2020 – 2022</h3>
+        <h4>Asistente de Eventos</h4>
+        <p>Inicio en atención al cliente, apoyo en eventos y logística básica.</p>
       </div>
 
     </div>
-  </div>
-</div>
+  </section>
 
-<div class="section-divider"></div>
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact">
+    <h2 class="section-title">Contacto</h2>
+    <p>📲 WhatsApp: 927 621 010</p>
+    <p>📍 Puno - Perú</p>
+  </section>
 
-<!-- HABILIDADES -->
-<section id="habilidades">
-  <p class="section-eyebrow">Competencias clave</p>
-  <h2 class="section-title">Estándares de Servicio</h2>
-  <div class="skills-grid">
-    <div>
-      <div class="skill-block">
-        <div class="skill-label">Protocolo de Alta Etiqueta <span>98%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:98%"></div></div>
-      </div>
-      <br>
-      <div class="skill-block">
-        <div class="skill-label">Servicio de Buffet <span>95%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-      </div>
-      <br>
-      <div class="skill-block">
-        <div class="skill-label">Manejo de Sala y Bandejas <span>97%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:97%"></div></div>
-      </div>
-    </div>
-    <div>
-      <div class="skill-block">
-        <div class="skill-label">Puntualidad y Compromiso <span>100%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div>
-      </div>
-      <br>
-      <div class="skill-block">
-        <div class="skill-label">Coordinación con Equipos <span>92%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
-      </div>
-      <br>
-      <div class="skill-block">
-        <div class="skill-label">Atención al Cliente VIP <span>96%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:96%"></div></div>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Garzones Elite - Todos los derechos reservados
+  </footer>
 
-<div class="section-divider"></div>
-
-<!-- COBERTURA -->
-<div id="cobertura">
-  <div class="inner">
-    <p class="section-eyebrow">Zonas de atención</p>
-    <h2 class="section-title">Cobertura Regional</h2>
-    <p class="section-subtitle">Con base en Puno y disponibilidad para desplazarse a las principales ciudades y zonas fronterizas del sur de América Latina.</p>
-
-    <div class="coverage-cards">
-      <div class="coverage-card">
-        <span class="coverage-card-flag">🇧🇴</span>
-        <div class="coverage-card-country">Bolivia</div>
-        <p class="coverage-card-detail">Zona fronteriza<br>Desaguadero · Copacabana</p>
-      </div>
-      <div class="coverage-card featured">
-        <span class="coverage-card-flag">🇵🇪</span>
-        <div class="coverage-card-country">Perú</div>
-        <p class="coverage-card-detail">
-          <strong style="color:var(--gold-light)">Puno · Ilave · Juliaca</strong><br>
-          Desaguadero · Tacna · Arequipa
-        </p>
-        <span class="featured-badge">Sede Principal</span>
-      </div>
-      <div class="coverage-card">
-        <span class="coverage-card-flag">🇨🇱</span>
-        <div class="coverage-card-country">Chile</div>
-        <p class="coverage-card-detail">Zona fronteriza<br>Arica · Iquique</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section-divider"></div>
-
-<!-- GITHUB -->
-<div id="github">
-  <div class="inner">
-    <div class="github-text">
-      <p class="section-eyebrow">Perfil profesional</p>
-      <h2 class="section-title">Garzones Elite<br>en GitHub</h2>
-      <p class="section-subtitle">Transparencia total. Nuestro perfil digital está disponible para clientes, organizadores y aliados que deseen conocer más sobre nuestra trayectoria.</p>
-      <br>
-      <a href="https://github.com/luisbeltran-parker" target="_blank" class="btn-outline">Ver Perfil en GitHub →</a>
-    </div>
-    <div>
-      <div class="github-card">
-        <div class="github-header">
-          <div class="github-avatar">GE</div>
-          <div>
-            <div class="github-username">Garzones Elite</div>
-            <div class="github-handle">github.com/luisbeltran-parker</div>
-          </div>
-        </div>
-        <p class="github-bio">
-          Servicio profesional de mozos para eventos sociales y corporativos en el sur del Perú. Elegancia, puntualidad y compromiso desde Puno para todo el Perú, Bolivia y Chile.
-        </p>
-        <div class="github-stats">
-          <div class="github-stat">
-            <div class="github-stat-num">+4</div>
-            <div class="github-stat-label">Años activos</div>
-          </div>
-          <div class="github-stat">
-            <div class="github-stat-num">+3</div>
-            <div class="github-stat-label">Regiones</div>
-          </div>
-          <div class="github-stat">
-            <div class="github-stat-num">100%</div>
-            <div class="github-stat-label">Compromiso</div>
-          </div>
-        </div>
-        <a href="https://github.com/luisbeltran-parker" target="_blank" class="github-link">
-          Ver perfil completo →
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section-divider"></div>
-
-<!-- CONTACTO -->
-<div id="contacto">
-  <div class="inner">
-    <p class="section-eyebrow">Reservas y consultas</p>
-    <h2 class="section-title">Contáctenos</h2>
-    <p class="section-subtitle" style="margin:0 auto">Coordine su evento con anticipación. Respondemos a la brevedad para confirmar disponibilidad y brindarle la mejor propuesta.</p>
-
-    <div class="contact-grid">
-      <div class="contact-item">
-        <span class="contact-icon">📲</span>
-        <div class="contact-label">WhatsApp Principal</div>
-        <div class="contact-value">+51 927 621 010</div>
-        <p class="contact-sub">Atención inmediata</p>
-        <a href="https://wa.me/51927621010?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Garzones%20Elite" target="_blank" class="whatsapp-btn">
-          💬 Escribir ahora
-        </a>
-      </div>
-      <div class="contact-item">
-        <span class="contact-icon">📱</span>
-        <div class="contact-label">WhatsApp Secundario</div>
-        <div class="contact-value">+51 935 965 552</div>
-        <p class="contact-sub">Reservas y coordinación</p>
-        <a href="https://wa.me/51935965552?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Garzones%20Elite" target="_blank" class="whatsapp-btn">
-          💬 Escribir ahora
-        </a>
-      </div>
-      <div class="contact-item">
-        <span class="contact-icon">📍</span>
-        <div class="contact-label">Ubicación Base</div>
-        <div class="contact-value">Puno, Perú</div>
-        <p class="contact-sub">Atención en todo el sur del Perú<br>Bolivia · Chile</p>
-      </div>
-      <div class="contact-item">
-        <span class="contact-icon">📘</span>
-        <div class="contact-label">Redes Sociales</div>
-        <div class="contact-value">Garzones Elite</div>
-        <p class="contact-sub">Facebook · Instagram</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div>
-    <div class="footer-brand">Garzones Elite</div>
-    <div class="footer-slogan">Elegancia que se nota · Servicio que se recuerda</div>
-  </div>
-  <div class="footer-social">
-    <a href="https://github.com/luisbeltran-parker" target="_blank">GitHub</a>
-    <a href="https://wa.me/51927621010" target="_blank">WhatsApp</a>
-    <a href="#servicios">Servicios</a>
-  </div>
-  <div class="footer-copy">© 2025 Garzones Elite · Puno, Perú</div>
-</footer>
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/51927621010?text=Hola%20quiero%20cotizar%20un%20evento" class="whatsapp">
+    WhatsApp
+  </a>
 
 </body>
 </html>
